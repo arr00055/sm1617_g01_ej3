@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold" id="mySidenav"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-padding-xlarge w3-hide-large w3-display-topleft w3-hover-white" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Escuela Superior Politécnica<br>de Linares</b></h3>
+  </div>
+  <a href="#" onclick="w3_close()" class="w3-padding w3-hover-white">Home</a> 
+  <a href="#auth" onclick="w3_close()" class="w3-padding w3-hover-white">Authentication</a> 
+  <a href="#services" onclick="w3_close()" class="w3-padding w3-hover-white">Implemented services</a> 
+  <a href="#developers" onclick="w3_close()" class="w3-padding w3-hover-white">Developers</a> 
+  <a href="#products" onclick="w3_close()" class="w3-padding w3-hover-white">Insert product</a> 
+  <a href="#tutorial" onclick="w3_close()" class="w3-padding w3-hover-white">Turorial</a> 
+  <a href="#info" onclick="w3_close()" class="w3-padding w3-hover-white">¿What does HosteRed offer us?</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-btn w3-red w3-border w3-border-white w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Escuela Politécnica Superior de Linares</span>
+</header>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>HosteRed</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>User-manual.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+	<p>In this user manual is intended to collect those parts of the application that the user should know, as well as a video tutorial of the use of the same.</p>
+	<p>This service is oriented to the hotel industry in general, and specifically to the administrative area of ​​this sector, so that the functions with which our service will include the following:</p>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
+    <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Sistema de autenticación -->
+  <div class="w3-container" id="auth" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Authentication.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>HosteRed provides us with a simple and effective authentication service that will keep our business secure. The entire client of this service must be authenticated before making use of the service, for it will need a field of username and a password that is later stored in the database of our server when the user registers providing a mail that It will be used to send you notifications.</p>
+	<p>Each time the user authenticates and connects to our remote server, the data of his business that were stored on the last occasion will be downloaded, these will replace the previous ones allowing the user to have in each moment the last version of the data that registered On the remote server.</p>
+
+    <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="../images/auth_land.png" style="width:100%" 		onclick="onClick(this)" alt="Concrete meets bricks">
+  </div> 
+  </div>
+  
+  <!-- Servicios implementados -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Implemented services.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Next we have a stock control screen, where we will control the products stored in our business. In this way, the manager or manager enters the warehouse at the end of the working day know how to count for the next and if it requires more goods.</p>
+
+    <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="../images/service_land.png" style="width:100%" 		onclick="onClick(this)" alt="Concrete meets bricks">
+  </div> 
+  </div>
+  
+    <!-- Informacion sobre desarrolladores -->
+  <div class="w3-container" id="developers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Developers.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The following is the name of the developers:</p>
+
+    <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="../images/info_land.png" style="width:100%" 		onclick="onClick(this)" alt="Concrete meets bricks">
+  </div> 
+  </div>
+  
+   <!-- Introducción de productos -->
+  <div class="w3-container" id="products" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Insert product.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Once authenticated, we can manage our application, inserting products into the stock when convenient, in an easy and intuitive way. We can fill in the following fields for each product: [Name, Current Value, Minimum Value, Supplier Name]. The user can add, delete or modify as needed </p>
+
+    <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="../images/stock_land.png" style="width:100%" 		onclick="onClick(this)" alt="Concrete meets bricks">
+  </div> 
+  </div>
+  
+   <!-- Tutorial -->
+  <div class="w3-container" id="tutorial" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Tutorial.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Video tutorial of the use of the application.</p>
+    <div class="w3-row-padding">
+	<video controls src="../video/tutorial.mp4" style="width: 899px; height: 521px" type="video/mp4"></video>
+  
+  
+  </div>
+  
+     <!-- Informacion adicional -->
+  <div class="w3-container" id="info" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>¿What does HosteRed offer us?.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The user of this service will be able to count on a great administrative information about his business in his mobile phone, and as long as he has Internet access he will be able to update the different data concerning his business.</p>
+	<p>A session expiration service, in case the session remains open to discover and will close after a time for security.</p>
+	<p>The possibility to rotate the screen and to adapt all the elements, for convenience.</p>
+	<p>It does not require the use of ancillary services, simply an email to register, and thus be able to notify information by the same.</p>
+	<p>A simple interface, fast and suitable not to excessively overload the resources of the mobile phone.</p>
+
+  </div>
+
+  
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
